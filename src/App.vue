@@ -68,7 +68,7 @@ const controls = useControlsStore()
 <style scoped>
 .all-screen {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 55px);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 30px;
