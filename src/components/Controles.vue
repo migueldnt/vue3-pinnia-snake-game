@@ -32,10 +32,10 @@
                 <GameButtonsIcon /> {{ controls.showControls ? 'Ocultar ' : 'Mostrar ' }} controles
             </button>
             <div class="creditos-desk">
-                <span>Ver codigo en</span> <a href="#">github</a>
+                <span>Ver codigo en</span> <a href="https://github.com/migueldanto/vue3-pinnia-snake-game">github</a>
             </div>
             <div class="creditos-mobile">
-                <a href="#">github</a>
+                <a href="https://github.com/migueldanto/vue3-pinnia-snake-game">github</a>
             </div>
         </div>
 
