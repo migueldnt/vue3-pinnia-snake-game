@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="footer">
-            <button @click="alternateControls">
+            <button @click="alternateControls" :disabled="game.startedGame">
                 <GameButtonsIcon /> {{ controls.showControls ? 'Ocultar ' : 'Mostrar ' }} controles
             </button>
             <div class="creditos-desk">
@@ -119,6 +119,9 @@ function spaceBarAction() {
     height: 30px;
 
 }
+.footer button:disabled{
+    background-color: gray;
+}
 
 .footer button svg {
     margin-right: 5px;
@@ -157,7 +160,7 @@ function spaceBarAction() {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 2rem;
+    width: 50%;
     
     
 }
@@ -189,16 +192,33 @@ function spaceBarAction() {
     color: black;
     background-color: #b8ceff;
 }
+
+controls .directions .row2{
+    display: flex;
+    flex-direction: column;
+}
 .controls .directions .row2 button{
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 .controls .playpause {
     flex-grow: 0;
+    display: flex;
+    justify-content: center;
 }
 .controls .playpause button{
     font-family: 'Silkscreen', cursive;
     width: auto;
     padding: 0 1em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .controls .playpause button{
+        
+    }
 }
 </style>
