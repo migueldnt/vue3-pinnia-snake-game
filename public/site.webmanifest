@@ -1,0 +1,19 @@
+{
+    "name": "Vue 3 pinnia Snake game",
+    "short_name": "Snake game",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#82C35F",
+    "background_color": "#82C35F",
+    "display": "standalone"
+}
