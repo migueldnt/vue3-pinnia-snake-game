@@ -68,14 +68,19 @@ const controls = useControlsStore()
 <style scoped>
 .all-screen {
   width: 100vw;
-  height: calc(100vh - 55px);
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 30px;
 
 }
+@media only screen and (max-width: 768px) {
+  .all-screen {
+    height: calc(100vh - 55px);
+  }
+}
 
 .all-screen.show-controls {
-  grid-template-rows: 1fr calc(30px + 100px);
+  grid-template-rows: 1fr calc(30px + 150px);
 }
 </style>
