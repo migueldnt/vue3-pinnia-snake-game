@@ -24,7 +24,8 @@
 
             </div>
             <div class="playpause">
-                <button @click="spaceBarAction">spacebar (play/pause)</button>
+                (play/pause)
+                <button @click="spaceBarAction">spacebar </button>
             </div>
         </div>
         <div class="footer">
@@ -32,9 +33,10 @@
                 <GameButtonsIcon /> {{ controls.showControls ? 'Ocultar ' : 'Mostrar ' }} controles
             </button>
             <div class="creditos-desk">
-                <span>Ver codigo en</span> <a href="https://github.com/migueldanto/vue3-pinnia-snake-game">github</a>
+                <span>Desarrollado por <a href="https://migueldnt.dev">migueldnt.dev</a>  - Ver codigo en</span> <a href="https://github.com/migueldanto/vue3-pinnia-snake-game">github</a>
             </div>
             <div class="creditos-mobile">
+                
                 <a href="https://github.com/migueldanto/vue3-pinnia-snake-game">github</a>
             </div>
         </div>
@@ -151,7 +153,7 @@ function spaceBarAction() {
 .controls {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-grow: 1;
 }
@@ -160,7 +162,7 @@ function spaceBarAction() {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    
     
     
 }
@@ -175,8 +177,8 @@ function spaceBarAction() {
     border-top: 5px inset rgba(255, 255, 255, .5);
     box-sizing: border-box;
     background-color: #94B3FD;
-    height: 30px;
-    width: 30px;
+    height: 45px;
+    width: 45px;
     padding: 0;
     display: inline-flex;
     justify-content: center;
@@ -193,19 +195,25 @@ function spaceBarAction() {
     background-color: #b8ceff;
 }
 
-controls .directions .row2{
+.controls .directions .row2{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 .controls .directions .row2 button{
-    margin: 0 15px;
+    margin: 2.5px 27.5px;
 }
 
 .controls .playpause {
     flex-grow: 0;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Silkscreen', cursive;
+    font-size: 12px;
 }
+
 .controls .playpause button{
     font-family: 'Silkscreen', cursive;
     width: auto;
@@ -218,7 +226,7 @@ controls .directions .row2{
 
 @media only screen and (max-width: 768px) {
     .controls .playpause button{
-        
+        max-width: calc(50vw - 5px);
     }
 }
 </style>
